@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2022_06_21_150512) do
 
   create_table "destinations", force: :cascade do |t|
     t.string "destination"
-    t.string "type"
+    t.string "geography"
     t.integer "rating"
     t.integer "country_id"
     t.integer "tourist_id"
