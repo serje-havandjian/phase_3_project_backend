@@ -48,6 +48,9 @@ beirut = Destination.create(destination:"Beirut", geography:"city", rating: 5, c
 yerevan = Destination.create(destination:"Yerevan", geography:"city", rating: 5, country_id: armenia.id, tourist_id: bob.id)
 seoul = Destination.create(destination:"Seoul", geography:"city", rating: 5, country_id: south_korea.id, tourist_id: bill.id)
 toronto = Destination.create(destination:"Toronto", geography: "city", rating: 1, country_id: canada.id, tourist_id: bob.id)
+buenos_aires = Destination.create(destination:"Buenos Aires", geography: "city", rating: 3, country_id: argentina.id, tourist_id: ben.id)
+queenstown = Destination.create(destination: "Queenstown", geography: "mountain", rating: 3, country_id: new_zealand.id, tourist_id: beverly.id)
+sahara = Destination.create(destination: "Sahara", geography: "desert", rating: 4, country_id: morocco.id, tourist_id: ben.id)
 
 
 puts "✅ Done seeding!"

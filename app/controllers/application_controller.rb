@@ -18,6 +18,20 @@ class ApplicationController < Sinatra::Base
 
   end
 
+  get "/tourists" do 
+    tourists = Tourist.all
+    tourists.to_json
+  end
+
+  post "/tourists" do
+    new_tourist = Tourist.create(
+      name: params[:name]
+    )
+    new_tourist.to_json
+  end
+
+
+
   post "/destinations" do
     new_destination = Destination.create(
       destination: params[:destination],
