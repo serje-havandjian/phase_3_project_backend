@@ -1,6 +1,9 @@
 puts "🌱 Seeding spices..."
 
 # Seed your database here
+Country.destroy_all
+Tourist.destroy_all
+Destination.destroy_all
 
 # Tourists
 
@@ -12,22 +15,22 @@ barbara = Tourist.create(name:"barbara")
 
 # Countries
 
-france = Country.create(country_name:"France", continent:"Europe", language:"French")
-vietnam = Country.create(country_name:"Vietnam", continent:"Asia", language:"Vietnamese")
-greece = Country.create(country_name:"Greece", continent:"Europe", language:"Greek")
-italy = Country.create(country_name:"Italy", continent:"Europe", language:"Italian")
-syria = Country.create(country_name:"Syria", continent:"Asia", language:"Arabic")
-lebanon = Country.create(country_name:"Lebanon", continent:"Asia", language:"Arabic")
-armenia = Country.create(country_name:"Armenia", continent:"Asia", language:"Armenian")
-japan = Country.create(country_name:"Japan", continent:"Asia", language:"Japense")
-south_korea = Country.create(country_name:"South Korea", continent:"Asia", language:"Korean")
-andorra = Country.create(country_name:"Andorra", continent:"Europe", language:"Catalan")
-morocco = Country.create(country_name:"Morocco", continent:"Africa", language:"Arabic")
-angola = Country.create(country_name:"Angola", continent:"Africa", language:"Portugese")
-argentina = Country.create(country_name:"Argentina", continent:"South America", language:"Spanish")
-canada = Country.create(country_name:"Canada", continent:"North America", language:"English")
-new_zealand = Country.create(country_name:"New Zealand", continent:"Oceania", language:"English")
-thailand = Country.create(country_name:"Thailand", continent:"Asia", language:"Thai")
+france = Country.create(country_name:"France", continent:"europe", language:"French")
+vietnam = Country.create(country_name:"Vietnam", continent:"asia", language:"Vietnamese")
+greece = Country.create(country_name:"Greece", continent:"europe", language:"Greek")
+italy = Country.create(country_name:"Italy", continent:"europe", language:"Italian")
+syria = Country.create(country_name:"Syria", continent:"asia", language:"Arabic")
+lebanon = Country.create(country_name:"Lebanon", continent:"asia", language:"Arabic")
+armenia = Country.create(country_name:"Armenia", continent:"asia", language:"Armenian")
+japan = Country.create(country_name:"Japan", continent:"asia", language:"Japanese")
+south_korea = Country.create(country_name:"South Korea", continent:"asia", language:"Korean")
+andorra = Country.create(country_name:"Andorra", continent:"europe", language:"Catalan")
+morocco = Country.create(country_name:"Morocco", continent:"africa", language:"Arabic")
+angola = Country.create(country_name:"Angola", continent:"africa", language:"Portugese")
+argentina = Country.create(country_name:"Argentina", continent:"south america", language:"Spanish")
+canada = Country.create(country_name:"Canada", continent:"north america", language:"English")
+new_zealand = Country.create(country_name:"New Zealand", continent:"oceania", language:"English")
+thailand = Country.create(country_name:"Thailand", continent:"asia", language:"Thai")
 
 # Destinations
 
@@ -44,6 +47,7 @@ baalbek = Destination.create(destination:"Baalbek", geography:"city", rating: 5,
 beirut = Destination.create(destination:"Beirut", geography:"city", rating: 5, country_id: lebanon.id, tourist_id: barbara.id)
 yerevan = Destination.create(destination:"Yerevan", geography:"city", rating: 5, country_id: armenia.id, tourist_id: bob.id)
 seoul = Destination.create(destination:"Seoul", geography:"city", rating: 5, country_id: south_korea.id, tourist_id: bill.id)
+toronto = Destination.create(destination:"Toronto", geography: "city", rating: 1, country_id: canada.id, tourist_id: bob.id)
 
 
 puts "✅ Done seeding!"

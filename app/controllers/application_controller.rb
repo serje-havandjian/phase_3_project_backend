@@ -6,6 +6,12 @@ class ApplicationController < Sinatra::Base
     { message: "Welcome to your mediocre travel site" }.to_json
   end
 
+  get "/continent/:continent_name" do 
+    continent = Destination.filter_by_continent(params[:continent_name])
+    puts "hello world"
+    continent.to_json(include: [:tourist, :country])
+  end
+
   get "/destinations" do
     destinations = Destination.destination_order
     destinations.to_json
