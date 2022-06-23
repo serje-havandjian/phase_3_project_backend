@@ -23,6 +23,11 @@ class ApplicationController < Sinatra::Base
     tourists.to_json
   end
 
+  get "/countries" do
+    countries = Country.all
+    countries.to_json
+  end
+
   post "/tourists" do
     new_tourist = Tourist.create(
       name: params[:name]
@@ -30,6 +35,16 @@ class ApplicationController < Sinatra::Base
     new_tourist.to_json
   end
 
+  get "/continent" do
+    continent = Destination.all
+    continent.to_json
+  end
+
+  delete "/destination/:id" do
+    delete_destination = Destination.find(params[:id])
+    delete_destination.destroy
+    delete_destination.to_json
+  end
 
 
   post "/destinations" do
@@ -43,23 +58,12 @@ class ApplicationController < Sinatra::Base
     new_destination.to_json
   end
 
-  patch "/destinations/:id" do
-    update_destination = Destination.find(params[:id])
-    update_destination.update(
-      destination: params[:destination],
-      geography: params[:geography],
-      rating: params[:rating],
-      country_id: params[:country_id],
-      tourist_id: params[:tourist_id]
+  patch "/tourists/:id" do
+    update_tourist = Tourist.find(params[:id])
+    update_tourist.update(
+      name: params[:name]
     )
-    update_destination.to_json
+    update_tourist.to_json
   end
-
-  delete "/destination/:id" do
-    delete_destination = Destination.find(params[:id])
-    delete_destination.destroy
-    delete_destination.to_json
-  end
-
 
 end

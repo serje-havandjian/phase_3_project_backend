@@ -29,8 +29,9 @@ morocco = Country.create(country_name:"Morocco", continent:"africa", language:"A
 angola = Country.create(country_name:"Angola", continent:"africa", language:"Portugese")
 argentina = Country.create(country_name:"Argentina", continent:"south america", language:"Spanish")
 canada = Country.create(country_name:"Canada", continent:"north america", language:"English")
-new_zealand = Country.create(country_name:"New Zealand", continent:"oceania", language:"English")
+australia = Country.create(country_name:"Australia", continent:"australia", language:"English")
 thailand = Country.create(country_name:"Thailand", continent:"asia", language:"Thai")
+antarctica = Country.create(country_name: "Antarctica", continent: "antarctica", language: "Russian")
 
 # Destinations
 
@@ -49,8 +50,10 @@ yerevan = Destination.create(destination:"Yerevan", geography:"city", rating: 5,
 seoul = Destination.create(destination:"Seoul", geography:"city", rating: 5, country_id: south_korea.id, tourist_id: bill.id)
 toronto = Destination.create(destination:"Toronto", geography: "city", rating: 1, country_id: canada.id, tourist_id: bob.id)
 buenos_aires = Destination.create(destination:"Buenos Aires", geography: "city", rating: 3, country_id: argentina.id, tourist_id: ben.id)
-queenstown = Destination.create(destination: "Queenstown", geography: "mountain", rating: 3, country_id: new_zealand.id, tourist_id: beverly.id)
+sydney = Destination.create(destination: "Sydney", geography: "city", rating: 3, country_id: australia.id, tourist_id: beverly.id)
 sahara = Destination.create(destination: "Sahara", geography: "desert", rating: 4, country_id: morocco.id, tourist_id: ben.id)
+ross_island = Destination.create(destination: "Ross Island", geography: "island", rating: 5, country_id: antarctica.id, tourist_id: barbara.id)
+
 
 
 puts "✅ Done seeding!"
