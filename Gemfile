@@ -1,6 +1,10 @@
 source "https://rubygems.org"
 
-ruby "~> 2.7.0"
+ruby "~> 2.7.4"
+
+
+# postgres gem 1.4
+gem "pg", "~> 1.4"
 
 # A DSL for quickly creating web applications
 # https://github.com/sinatra/sinatra
