@@ -3,6 +3,7 @@ class ApplicationController < Sinatra::Base
   
   # Add your routes here
   get "/" do
+    content_type "text/html"
     File.read(File.join("public", "index.html"))
   end
 
