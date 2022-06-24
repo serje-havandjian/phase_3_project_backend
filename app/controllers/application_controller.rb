@@ -3,7 +3,7 @@ class ApplicationController < Sinatra::Base
   
   # Add your routes here
   get "/" do
-    { message: "Welcome to your mediocre travel site" }.to_json
+    File.read(File.join("public", "index.html"))
   end
 
   get "/continent/:continent_name" do 
