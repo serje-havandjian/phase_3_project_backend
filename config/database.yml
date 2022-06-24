@@ -11,6 +11,8 @@ test:
   <<: *default
   database: db/test.sqlite3
 
-production:
-  <<: *default
+production: 
+    adapter: postgresql
+    pool: 5
+    timeout: 5000
     url: <%= ENV["DATABASE_URL"] %>
